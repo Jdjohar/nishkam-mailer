@@ -287,7 +287,7 @@ router.get("/api/v1/subscribelistsend", async (req, res) => {
 <p style="margin: 0; font-size: 12px; text-align: center;"><a href="https://nishkamusa.org/" rel="noopener" style="text-decoration: none; color: #0068A5;" target="_blank">www.nishkamusa.org</a></p>
 <p style="margin: 0; font-size: 12px; text-align: center;"><span style="">Address -  18 18 Wieuca Trace, Atlanta, GA 30342</span></p>
 
-<p style="margin: 0; font-size: 12px; text-align: center;"><span style=""> <a href="http://localhost:3000/api/v1/unsubscribe?email=`+element['email']+`">unsubscribe</a></span></p>
+<p style="margin: 0; font-size: 12px; text-align: center;"><span style=""> <a href="http://https://nishkam.herokuapp.com/api/v1/unsubscribe?email=`+element['email']+`">unsubscribe</a></span></p>
 </div>
 </div>
 </td>

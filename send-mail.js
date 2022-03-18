@@ -15,8 +15,8 @@ mailids.forEach(element => {
 const msg = {
   to: element['email'],
   from: 'info@jdwebservices.com ', // Use the email address or domain you verified above
-  subject: 'Email Send From Node JS',
-  text: 'Testing EMail Send From Node JS API',
+  subject: 'Teach a child how to use a PC for just USD28',
+  text: '',
   html: `
   <!DOCTYPE html>
 
@@ -137,7 +137,7 @@ const msg = {
 <td style="padding-top:35px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 <div style="font-family: sans-serif">
 <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #8d8a8a; line-height: 1.2; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;">
-<p style="margin: 0; font-size: 14px;"><span style="">Dear `+element['name']+`, <br/><br/>I am pleased to report that Nishkam USA has begun the year with a new initiative that is targeted at introducing the youth of Punjab in India to basic digital literacy. <br/><br/>For a mere $28 donation <a href="https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate" style="color: #0068A5;">donation</a> online, you can sponsor a child: <br/><br/>For a 4 month course <br/>Covering the basics of a PC, MS Office and Google Docs <br/>Teaching them how to surf the web, use email and the basics of how to make a resume <br/><br/>Please donate generously at https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate <a href="https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate" style="color: #0068A5;">https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate</a> <br/><br/>Nishkam has partnered with a private computer institute in Sri Muktsar Sahib in Punjab that will train young children in batches of 30 in these basic skills. Our goal is to teach the children that there is a world of opportunity that they can access via the internet with motivation and self-learning. <br/><br/>Here are the voices and faces of the kind of children that would be benefiting from this program. </span>I'm a new Text block ready for your content.</p>
+<p style="margin: 0; font-size: 14px;"><span style="">Dear `+element['name']+`, <br/><br/>I am pleased to report that Nishkam USA has begun the year with a new initiative that is targeted at introducing the youth of Punjab in India to basic digital literacy. <br/><br/>For a mere $28 donation <a href="https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate" style="color: #0068A5;">donation</a> online, you can sponsor a child: <br/><br/>*  (1 hour a day) <br/>* Covering the basics of a PC, MS Office and Google Docs <br/>*Teaching them how to surf the web, use email and the basics of how to make a resume <br/><br/>Please donate generously at https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate <a href="https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate" style="color: #0068A5;">https://dvnetwork.org/projects/help-the-youth-in-punjab-become-digitally-literate</a> <br/><br/>Nishkam has partnered with a private computer institute in Sri Muktsar Sahib in Punjab that will train young children in batches of 30 in these basic skills. Our goal is to teach the children that there is a world of opportunity that they can access via the internet with motivation and self-learning. <br/><br/>Here are the voices and faces of the kind of children that would be benefiting from this program. </span>I'm a new Text block ready for your content.</p>
 </div>
 </div>
 </td>
@@ -223,7 +223,6 @@ const msg = {
 <p style="margin: 0; mso-line-height-alt: 16.8px;"> </p>
 <p style="margin: 0;">Many thanks</p>
 <p style="margin: 0;"><br/><br/></p>
-<p style="margin: 0;">Parvinder Singh Arora</p>
 <p style="margin: 0;">Nishkam USA</p>
 </div>
 </div>

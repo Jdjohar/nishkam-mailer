@@ -402,11 +402,16 @@ router.get("/api/v1/unsubscribe", async (req, res) => {
     let email = req.query.email;
   const results = await db.query(`UPDATE subscribelist SET unsubscribe = '1' where donaremail1 = $1`, [email]);
   console.log(email, 'console');
+  if(results.rowCount > 0)
+  {
+    res.render('unsub', {page:'Unsubscribe', menuId:'unsubscribe'});
+  }else{
     res.status(200).json({
      status: "successswsdcsd",
      data: results.rowCount
     });
-    res.redirect('/message');
+  }
+    // res.redirect('/message');
   } catch(err){
     console.log(err);
   }

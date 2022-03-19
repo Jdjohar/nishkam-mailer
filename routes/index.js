@@ -1,10 +1,10 @@
 require('dotenv').config();
 var cors = require('cors');
 var express = require('express');
-const app = require('../app');
 const db = require('../db');
 const { Pool } = require('pg')
 const axios = require('axios');
+var path = require('path');
 const { response } = require('express');
 module.exports = router;
 const sgMail = require('@sendgrid/mail');
@@ -12,10 +12,15 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // const flash = require('express-flash');
 const { json } = require('body-parser');
+const { redirect } = require('express/lib/response');
+var app = express();
 
 var router = express.Router();
 router.all(cors());
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 
 // Getting all Subscribers Send Email
@@ -287,7 +292,7 @@ router.get("/api/v1/subscribelistsend", async (req, res) => {
 <p style="margin: 0; font-size: 12px; text-align: center;"><a href="https://nishkamusa.org/" rel="noopener" style="text-decoration: none; color: #0068A5;" target="_blank">www.nishkamusa.org</a></p>
 <p style="margin: 0; font-size: 12px; text-align: center;"><span style="">Address -  18 18 Wieuca Trace, Atlanta, GA 30342</span></p>
 
-<p style="margin: 0; font-size: 12px; text-align: center;"><span style=""> <a href="http://https://nishkam.herokuapp.com/api/v1/unsubscribe?email=`+element['email']+`">unsubscribe</a></span></p>
+<p style="margin: 0; font-size: 12px; text-align: center;"><span style=""> <a href="https://nishkam.herokuapp.com/api/v1/unsubscribe?email=`+element['email']+`">unsubscribe</a></span></p>
 </div>
 </div>
 </td>
@@ -399,12 +404,23 @@ router.get("/api/v1/unsubscribe", async (req, res) => {
   console.log(email, 'console');
     res.status(200).json({
      status: "successswsdcsd",
-     data: results.rowCount
+     data: results.rowCount,  
+     redirect: "/api/v1/message"
     });
   } catch(err){
     console.log(err);
   }
 });
 
+
+/* GET Contact page. */
+router.get('/message', function(req, res, next) {
+  res.render('unsub', {page:'Unsubscribe', menuId:'unsubscribe'});
+});
+
+/* GET Contact page. */
+router.get('/test', function(req, res, next) {
+  res.render('test', {page:'test', menuId:'test'});
+});
   
 module.exports = router;

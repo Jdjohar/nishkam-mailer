@@ -404,9 +404,9 @@ router.get("/api/v1/unsubscribe", async (req, res) => {
   console.log(email, 'console');
     res.status(200).json({
      status: "successswsdcsd",
-     data: results.rowCount,  
-     redirect: "/api/v1/message"
+     data: results.rowCount
     });
+    res.redirect('message', {page:'test', menuId:'test'});
   } catch(err){
     console.log(err);
   }

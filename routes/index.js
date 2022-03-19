@@ -41,8 +41,7 @@ router.get("/api/v1/subscribelistsend", async (req, res) => {
     const msg = {
       to: element['email'],
       from: 'info@jdwebservices.com ', // Use the email address or domain you verified above
-      subject: 'Email Send From Node JS',
-      text: 'Testing EMail Send From Node JS API',
+      subject: 'Teach a child how to use a PC for just USD28',
       html: `
       <!DOCTYPE html>
 

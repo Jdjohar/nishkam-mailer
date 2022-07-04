@@ -1,17 +1,21 @@
-CREATE TABLE subscribelist(
+CREATE TABLE students(
    id BIGSERIAL PRIMARY KEY NOT NULL,
-   donarname          VARCHAR(255) NOT NULL
-  ,donaremail1         VARCHAR(255) NOT NULL
-  ,donaremail2         VARCHAR(255) NOT NULL
-  ,donarsubscribe VARCHAR(255) NOT NULL
-  ,unsubscribe VARCHAR(255) NOT NULL
-  ,donarip       VARCHAR(255) NOT NULL
+   stuname          VARCHAR(255) NOT NULL
+  ,stuemail         VARCHAR(255) NOT NULL
+  ,stumobile         VARCHAR(255) NOT NULL
+  ,lgpassword VARCHAR(255) NOT NULL
+  ,mobileotp VARCHAR(255) NOT NULL
+  ,mobileotpvalidtime VARCHAR(255) NOT NULL
+  ,emailotp VARCHAR(255) NOT NULL
+  ,emailotpvalidtime VARCHAR(255) NOT NULL
+  ,loginwith VARCHAR(255) NOT NULL
+  ,socialid VARCHAR(255) NOT NULL
+  ,loginip VARCHAR(255) NOT NULL
+  ,lastlogin VARCHAR(255) NOT NULL
+  ,registertime VARCHAR(255) NOT NULL
+  ,createdat VARCHAR(255) NOT NULL
+  ,updateat       VARCHAR(255) NOT NULL
 );
 
 
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Jashandeep Singh', 'jdeep514@gmail.com', '', 0, '0', '172.168.12.12');
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Manav Singh', 'manavsingh839@gmail.com', '', 0, '0', '172.168.12.12');
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Harmit Kamboe', 'hkamboe@gmail.com', '', 0, '0', '172.168.12.12');
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Gopal SIngh', 'gopal@sagassociates.com', '', 0, '0', '172.168.12.12');
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Parvinder SIngh', 'psarora@gmail.com', '', 0, '0', '172.168.12.12');
-INSERT INTO subscribelist (donarname, donaremail1, donaremail2, donarsubscribe,unsubscribe,donarip) VALUES('Karamjeet Singh Mann', 'karamjitmann@gmail.com', '', 0, '0', '172.168.12.12');
+INSERT INTO students (stuname,stuemail,stumobile,lgpassword,mobileotp,mobileotpvalidtime ,emailotp ,emailotpvalidtime ,loginwith ,socialid ,loginip ,lastlogin ,registertime ,createdat ,updateat) VALUES('Jashandeep Singh','jdeep514@gmail.com','9041619321','123456','asdf','mobileotpvalidtime' ,'emailotp' ,'emailotpvalidtime' ,'loginwith' ,'socialid' ,'loginip' ,'lastlogin' ,'registertime' ,'createdat' ,'updateat');
